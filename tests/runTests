@@ -18,10 +18,9 @@ dropAllTables() {
 }
 dropAllTables
 
-# Fetch Magento ee and untar it.
+# Fetch Magento ce and untar it.
 mv magento magento.deleteme && rm magento.deleteme &
-	wget -o wget.log -O- https://ebay.box.com/shared/static/qqusfdoxncska4r1lkeu.xz |
-	tar -xJpf-
+tar -xJpf /usr/local/share/magento-1.8.1.0.tar.xz
 
 cd magento
 # Run the Magento installer.
