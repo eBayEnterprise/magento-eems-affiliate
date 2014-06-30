@@ -332,7 +332,7 @@
 						</functions>
 						<genre translate="label">
 							<label>genre</label>
-							<comment>Genere</comment>
+							<comment>Genre</comment>
 							<frontend_type>select</frontend_type>
 							<source_model>eems_affiliate/system_config_source_attributes</source_model>
 							<sort_order>24</sort_order>
@@ -473,7 +473,7 @@
 						</manufacturer>
 						<material translate="label">
 							<label>material</label>
-							<comment>Contstruction material</comment>
+							<comment>Construction material</comment>
 							<frontend_type>select</frontend_type>
 							<source_model>eems_affiliate/system_config_source_attributes</source_model>
 							<sort_order>38</sort_order>
@@ -755,7 +755,7 @@
 						</shoe_size>
 						<shoe_width translate="label">
 							<label>shoe_width</label>
-							<comment>Shoe Width</comment>
+							<comment>Shoe width</comment>
 							<frontend_type>select</frontend_type>
 							<source_model>eems_affiliate/system_config_source_attributes</source_model>
 							<sort_order>66</sort_order>
@@ -805,7 +805,7 @@
 						</style>
 						<tech_spec_url translate="label">
 							<label>tech_spec_url</label>
-							<comment>Technical Specifications URL</comment>
+							<comment>Technical specifications URL</comment>
 							<frontend_type>select</frontend_type>
 							<source_model>eems_affiliate/system_config_source_attributes</source_model>
 							<sort_order>71</sort_order>
@@ -875,7 +875,7 @@
 						</year>
 						<zoom translate="label">
 							<label>zoom</label>
-							<comment>Maxium zoom</comment>
+							<comment>Maximum zoom</comment>
 							<frontend_type>select</frontend_type>
 							<source_model>eems_affiliate/system_config_source_attributes</source_model>
 							<sort_order>78</sort_order>
