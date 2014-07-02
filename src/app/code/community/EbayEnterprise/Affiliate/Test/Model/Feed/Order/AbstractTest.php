@@ -21,7 +21,6 @@ class EbayEnterprise_Affiliate_Test_Model_Feed_Order_AbstractTest
 {
 	/**
 	 * Test generating the file name using the
-	 * @test
 	 */
 	public function testGetFileName()
 	{

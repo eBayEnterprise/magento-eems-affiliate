@@ -26,7 +26,6 @@ class EbayEnterprise_Affiliate_Test_Model_ObserverTest
 	 * website store views, then expects the method
 	 * EbayEnterprise_Affiliate_Model_Product::generateFeed to be invoked per
 	 * default program id and store views
-	 * @test
 	 */
 	public function testCreateProductFeed()
 	{

@@ -22,7 +22,6 @@ class EbayEnterprise_Affiliate_Test_Model_Feed_ProductTest
 	/**
 	 * Test that EbayEnterprise_Affiliate_Model_Feed_Product::_getItems will return
 	 * a Mage_Catalog_Model_Resource_Product_Collection
-	 * @test
 	 */
 	public function testGetItems()
 	{
@@ -59,7 +58,6 @@ class EbayEnterprise_Affiliate_Test_Model_Feed_ProductTest
 	 * Test that EbayEnterprise_Affiliate_Model_Feed_Product::_getFeedFields will
 	 * retrieve a list of field from the configuration and explode it into an array
 	 * of fields
-	 * @test
 	 */
 	public function testGetFeedFields()
 	{
@@ -91,7 +89,6 @@ class EbayEnterprise_Affiliate_Test_Model_Feed_ProductTest
 	/**
 	 * Test that EbayEnterprise_Affiliate_Model_Feed_Product::_getFileName will return
 	 * a string representing a feed file name
-	 * @test
 	 */
 	public function testFileName()
 	{
@@ -122,7 +119,6 @@ class EbayEnterprise_Affiliate_Test_Model_Feed_ProductTest
 	 * Test that EbayEnterprise_Affiliate_Model_Feed_Product::_applyMapping will
 	 * be invoked with a Mage_Catalog_Model_Product object passed as its parameter
 	 * and it will generate an array of callback result from configuration
-	 * @test
 	 */
 	public function testApplyMapping()
 	{

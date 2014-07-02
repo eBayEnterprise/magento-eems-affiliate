@@ -21,7 +21,6 @@ class EbayEnterprise_Affiliate_Test_Helper_DataTest
 	/**
 	 * Test that EbayEnterprise_Affiliate_Helper_Data::buildBeaconUrl yields the
 	 * expected, escaped url with query string when passed an array of params to append.
-	 * @test
 	 */
 	public function testBuildBeaconUrl()
 	{

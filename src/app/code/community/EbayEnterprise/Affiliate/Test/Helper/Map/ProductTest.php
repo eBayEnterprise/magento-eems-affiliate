@@ -22,7 +22,6 @@ class EbayEnterprise_Affiliate_Test_Helper_Map_ProductTest
 	 * Test that EbayEnterprise_Affiliate_Helper_Map_Product::getCategory will
 	 * return a string of root category separated with the symbol '>' with inner
 	 * category to the the inner most category.
-	 * @test
 	 */
 	public function testGetCategory()
 	{
@@ -63,7 +62,6 @@ class EbayEnterprise_Affiliate_Test_Helper_Map_ProductTest
 	/**
 	 * Test that EbayEnterprise_Affiliate_Helper_Map_Product::getImageUrl will
 	 * return an absolute URL to an image view.
-	 * @test
 	 */
 	public function testGetImageUrl()
 	{
@@ -97,7 +95,6 @@ class EbayEnterprise_Affiliate_Test_Helper_Map_ProductTest
 	/**
 	 * Test that EbayEnterprise_Affiliate_Helper_Map_Product::getInStockQty will
 	 * return an integer value representing the manage stock qty of a product.
-	 * @test
 	 */
 	public function testGetInStockQty()
 	{
@@ -124,7 +121,6 @@ class EbayEnterprise_Affiliate_Test_Helper_Map_ProductTest
 	 * Test that EbayEnterprise_Affiliate_Helper_Map_Product::_getCategoriesByIds
 	 * will be invoked by this test passing an array of category entity ids
 	 * and will return a Mage_Catalog_Model_Resource_Category_Collection
-	 * @test
 	 */
 	public function testGetCategoriesByIds()
 	{
@@ -156,7 +152,6 @@ class EbayEnterprise_Affiliate_Test_Helper_Map_ProductTest
 	 * Test that EbayEnterprise_Affiliate_Helper_Map_Product::getInStockYesNo will
 	 * be called by this test passing an array with key item map to a
 	 * Mage_Catalog_Model_Product object and expects it to return the string value 'yes'.
-	 * @test
 	 */
 	public function testGetInStockYesNo()
 	{

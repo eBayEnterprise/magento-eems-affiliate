@@ -21,7 +21,6 @@ class EbayEnterprise_Affiliate_Test_Model_Feed_AbstractTest
 {
 	/**
 	 * Test generating a feed file
-	 * @test
 	 */
 	public function testGenerateFeed()
 	{
@@ -42,7 +41,6 @@ class EbayEnterprise_Affiliate_Test_Model_Feed_AbstractTest
 	}
 	/**
 	 * Test generating array of data to place into feed
-	 * @test
 	 */
 	public function testBuildFeedData()
 	{
@@ -80,7 +78,6 @@ class EbayEnterprise_Affiliate_Test_Model_Feed_AbstractTest
 	/**
 	 * Test applying the configured mapping to the item to get back an array of
 	 * data for each field in the feed.
-	 * @test
 	 */
 	public function testApplyMapping()
 	{
@@ -139,7 +136,6 @@ class EbayEnterprise_Affiliate_Test_Model_Feed_AbstractTest
 	/**
 	 * Test that when a configured method does not exist on the specified class,
 	 * an exception is thrown.
-	 * @test
 	 */
 	public function testInvokeCallbackFailures()
 	{
@@ -204,7 +200,6 @@ class EbayEnterprise_Affiliate_Test_Model_Feed_AbstractTest
 	 * thrown. Otherwise, the method should simply reurun self.
 	 * @param  array $config Array of config data to validate
 	 * @param  boolean $isValid Is the config data valid
-	 * @test
 	 * @dataProvider provideCallbacksToValidate
 	 */
 	public function testValidateCallbackConfig($config, $isValid)
@@ -228,7 +223,6 @@ class EbayEnterprise_Affiliate_Test_Model_Feed_AbstractTest
 	}
 	/**
 	 * Test getting column headers based on the configured mappings for the feed.
-	 * @test
 	 */
 	public function testGetHeaders()
 	{
@@ -262,7 +256,6 @@ class EbayEnterprise_Affiliate_Test_Model_Feed_AbstractTest
 	/**
 	 * Test generating the full path to the file. Should consist of Magento's
 	 * base dir, the configured export feed path, and the name of the file.
-	 * @test
 	 */
 	public function testGenerateFilePath()
 	{
