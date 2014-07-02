@@ -1,0 +1,1 @@
+- Fix help text typos

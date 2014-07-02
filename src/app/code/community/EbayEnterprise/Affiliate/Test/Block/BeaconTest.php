@@ -44,7 +44,6 @@ class EbayEnterprise_Affiliate_Test_Block_BeaconTest
 	/**
 	 * Test building the basic beacon url. Should only include order level
 	 * information about the order in the url params.
-	 * @test
 	 */
 	public function testGetBeaconUrlBasic()
 	{
@@ -92,7 +91,6 @@ class EbayEnterprise_Affiliate_Test_Block_BeaconTest
 	/**
 	 * Test building the itemized beacon url. Should include item level details
 	 * in the url params for each item in the order.
-	 * @test
 	 */
 	public function testGetBeaconUrlItemized()
 	{
@@ -190,7 +188,6 @@ class EbayEnterprise_Affiliate_Test_Block_BeaconTest
 	/**
 	 * Test that EbayEnterprise_Affiliate_Block_Beacon::_getOrder will be invoked
 	 * by this test and expect it to return Mage_Sales_Model_Order object
-	 * @test
 	 */
 	public function testGetOrder()
 	{
@@ -219,7 +216,6 @@ class EbayEnterprise_Affiliate_Test_Block_BeaconTest
 	/**
 	 * Test that EbayEnterprise_Affiliate_Block_Beacon::showBeacon will return true
 	 * when invoke by this test.
-	 * @test
 	 */
 	public function testShowBeacon()
 	{
