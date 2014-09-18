@@ -80,7 +80,7 @@ return array(
 	//PHP min/max fields for Connect.  I don't know if anyone uses these, but you should
 	//probably check that they're accurate
 	'php_min'                => '5.3.0',
-	'php_max'                => '5.3.99',
+	'php_max'                => '5.4.99',
 
 	//PHP extension dependencies. An array containing one or more of either:
 	//  - a single string (the name of the extension dependency); use this if the
