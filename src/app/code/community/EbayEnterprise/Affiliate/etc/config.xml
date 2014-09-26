@@ -40,7 +40,7 @@
 			<eems_affiliate_setup>
 				<setup>
 					<module>EbayEnterprise_Affiliate</module>
-					<class>Mage_Sales_Model_Resource_Setup</class>
+					<class>Mage_Core_Model_Resource_Setup</class>
 				</setup>
 			</eems_affiliate_setup>
 		</resources>
