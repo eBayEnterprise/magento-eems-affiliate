@@ -36,8 +36,8 @@ class EbayEnterprise_Affiliate_Helper_Config
 	const BASIC_ORDER_FEED_FILE_FORMAT_PATH = 'marketing_solutions/eems_affiliate/feeds/order_basic/file_name_format';
 	const ORDER_LAST_RUN_PATH = 'marketing_solutions/eems_affiliate/feed/last_run_time';
 	const JS_FILES = 'marketing_solutions/eems_affiliate/js_files';
-    const ENABLED_CONDITIONAL_PIXEL = 'marketing_solutions/eems_affiliate/enabled_condtional_pixel';
-    const SOURCE_NAME = 'source_name';
+        const ENABLED_CONDITIONAL_PIXEL = 'marketing_solutions/eems_affiliate/enabled_condtional_pixel';
+        const SOURCE_NAME = 'source_name';
 
 	const TRANSACTION_TYPE_SALE = '1';
 	const TRANSACTION_TYPE_LEAD = '2';
