@@ -44,6 +44,16 @@
 				</setup>
 			</eems_affiliate_setup>
 		</resources>
+		<events>
+			<core_block_abstract_prepare_layout_before>
+				<observers>
+					<inject_cookie_js_prepare_layout_before>
+						<class>eems_affiliate/observer</class>
+						<method>injectCookieJs</method>
+					</inject_cookie_js_prepare_layout_before>
+				</observers>
+			</core_block_abstract_prepare_layout_before>
+		</events>
 	</global>
 	<crontab>
 		<jobs>
@@ -65,6 +75,9 @@
 		<marketing_solutions>
 			<eems_affiliate>
 				<active>0</active>
+				<enabled_conditional_pixel>0</enabled_conditional_pixel>
+				<source_name>eean</source_name>
+				<js_files>eems_affiliate/cookie.js</js_files> <!-- use comma to add more js files-->
 				<beacon_url>https://t.pepperjamnetwork.com/track</beacon_url>
 				<export_path>var/export/eems_affiliate/</export_path>
 				<int>ITEMIZED</int>
