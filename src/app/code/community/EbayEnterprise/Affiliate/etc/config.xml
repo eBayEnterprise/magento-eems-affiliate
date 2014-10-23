@@ -84,6 +84,8 @@
 				<itemized_orders>1</itemized_orders>
 				<program_id></program_id>
 				<transaction_type>1</transaction_type>
+                <enabled_condtional_pixel>0</enabled_condtional_pixel>
+                <source_name></source_name>
 				<feeds>
 					<callback_mappings>
 						<program_id>

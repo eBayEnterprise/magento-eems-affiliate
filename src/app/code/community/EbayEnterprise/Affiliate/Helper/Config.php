@@ -35,9 +35,9 @@ class EbayEnterprise_Affiliate_Helper_Config
 	const ITEMIZED_ORDER_FEED_FILE_FORMAT_PATH = 'marketing_solutions/eems_affiliate/feeds/order_itemized/file_name_format';
 	const BASIC_ORDER_FEED_FILE_FORMAT_PATH = 'marketing_solutions/eems_affiliate/feeds/order_basic/file_name_format';
 	const ORDER_LAST_RUN_PATH = 'marketing_solutions/eems_affiliate/feed/last_run_time';
-	const ENABLED_CONDITIONAL_PIXEL = 'marketing_solutions/eems_affiliate/enabled_conditional_pixel';
-	const SOURCE_NAME = 'marketing_solutions/eems_affiliate/source_name';
 	const JS_FILES = 'marketing_solutions/eems_affiliate/js_files';
+    const ENABLED_CONDITIONAL_PIXEL = 'marketing_solutions/eems_affiliate/enabled_condtional_pixel';
+    const SOURCE_NAME = 'source_name';
 
 	const TRANSACTION_TYPE_SALE = '1';
 	const TRANSACTION_TYPE_LEAD = '2';
@@ -191,31 +191,30 @@ class EbayEnterprise_Affiliate_Helper_Config
 	{
 		return Mage::getStoreConfig(self::ORDER_LAST_RUN_PATH);
 	}
-	/**
-	 * check if conditional pixel logic is enable in the store config
-	 * @param mixed $store
-	 * @return bool
-	 */
-	public function isConditionalPixelEnabled($store=null)
-	{
-		return Mage::getStoreConfigFlag(static::ENABLED_CONDITIONAL_PIXEL, $store);
-	}
-	/**
-	 * Get the configured conditional pixel logic query string name
-	 * @param  mixed $store
-	 * @return string
-	 */
-	public function getSourceName($store=null)
-	{
-		return Mage::getStoreConfig(static::SOURCE_NAME, $store);
-	}
-	/**
-	 * Get the configured javascript files
-	 * @param  mixed $store
-	 * @return string
-	 */
-	public function getJsFiles($store=null)
-	{
-		return Mage::getStoreConfig(static::JS_FILES, $store);
-	}
+
+    /**
+     * Enable/disable conditional pixel logic
+     *
+     * @param null $store
+     * @return bool
+     */
+    public function isEnabledConditionalPixel($store=null)
+    {
+        return Mage::getStoreConfig(self::ENABLED_CONDITIONAL_PIXEL);
+    }
+
+    /**
+     * Name of the affiliate source
+     *
+     * If conditional pixel logic is enabled then only display the pixel
+     * if the affiliate source passed in the query string is the same
+     * as this name
+     *
+     * @param null $store
+     * @return string
+     */
+    public function getSourceName($store=null)
+    {
+        return Mage::getStoreConfig(self::SOURCE_NAME);
+    }
 }
