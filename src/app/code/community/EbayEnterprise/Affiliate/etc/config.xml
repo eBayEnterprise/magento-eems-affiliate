@@ -44,16 +44,6 @@
 				</setup>
 			</eems_affiliate_setup>
 		</resources>
-		<events>
-			<core_block_abstract_prepare_layout_before>
-				<observers>
-					<inject_cookie_js_prepare_layout_before>
-						<class>eems_affiliate/observer</class>
-						<method>injectCookieJs</method>
-					</inject_cookie_js_prepare_layout_before>
-				</observers>
-			</core_block_abstract_prepare_layout_before>
-		</events>
 	</global>
 	<crontab>
 		<jobs>
@@ -84,7 +74,7 @@
 				<itemized_orders>1</itemized_orders>
 				<program_id></program_id>
 				<transaction_type>1</transaction_type>
-                <enabled_condtional_pixel>0</enabled_condtional_pixel>
+                <enabled_conditional_pixel>0</enabled_conditional_pixel>
                 <source_name></source_name>
 				<feeds>
 					<callback_mappings>

@@ -64,24 +64,4 @@ class EbayEnterprise_Affiliate_Model_Observer
 
 		return $this;
 	}
-	/**
-	 * Injecting the cookie js file on every Magento pages
-	 * @param  Varien_Event_Observer $observer
-	 * @return self
-	 */
-	public function injectCookieJs(Varien_Event_Observer $observer)
-	{
-		$config = Mage::helper('eems_affiliate/config');
-		if (!$config->isConditionalPixelEnabled()) {
-			return $this;
-		}
-		/** @var Mage_Page_Block_Html_Head $block */
-		$block = $observer->getEvent()->getBlock();
-		if ("head" == $block->getNameInLayout()) {
-			foreach (explode(',', $config->getJsFiles()) as $jsFile) {
-				$block->addJs($jsFile);
-			}
-		}
-		return $this;
-	}
 }

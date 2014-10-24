@@ -88,7 +88,7 @@
 							<show_in_website>0</show_in_website>
 							<show_in_store>0</show_in_store>
 						</export_path>
-                        <enabled_condtional_pixel translate="label">
+                        <enabled_conditional_pixel translate="label">
                             <label>Conditional Pixel</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
@@ -96,12 +96,12 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>0</show_in_store>
-                        </enabled_condtional_pixel>
+                        </enabled_conditional_pixel>
                         <source_name translate="label comment">
                             <label>Affiliate Source Name</label>
                             <comment>Only apply the pixel if the source is this affiliate.</comment>
                             <frontend_type>text</frontend_type>
-                            <depends><enabled_condtional_pixel>1</enabled_condtional_pixel></depends>
+                            <depends><enabled_conditional_pixel>1</enabled_conditional_pixel></depends>
                             <sort_order>70</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
