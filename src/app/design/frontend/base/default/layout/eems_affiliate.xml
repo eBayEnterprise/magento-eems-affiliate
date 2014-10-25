@@ -15,6 +15,13 @@
 
 -->
 <layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addJs" ifconfig="marketing_solutions/eems_affiliate/enabled_conditional_pixel">
+                <script>eems_affiliate/eems_affiliate.js</script>
+            </action>
+        </reference>
+    </default>
 	<checkout_affiliate_success translate="label">
 		<reference name="before_body_end">
 			<block type="eems_affiliate/beacon" name="eems_affiliate.beacon" template="eems_affiliate/beacon.phtml"/>
