@@ -37,7 +37,7 @@ class EbayEnterprise_Affiliate_Helper_Config
 	const ORDER_LAST_RUN_PATH = 'marketing_solutions/eems_affiliate/feed/last_run_time';
 	const JS_FILES = 'marketing_solutions/eems_affiliate/js_files';
     const ENABLED_CONDITIONAL_PIXEL = 'marketing_solutions/eems_affiliate/enabled_conditional_pixel';
-    const SOURCE_NAME = 'source_name';
+    const SOURCE_KEY_NAME = 'marketing_solutions/eems_affiliate/source_key_name';
 
 	const TRANSACTION_TYPE_SALE = '1';
 	const TRANSACTION_TYPE_LEAD = '2';
@@ -207,15 +207,14 @@ class EbayEnterprise_Affiliate_Helper_Config
      * Name of the affiliate source
      *
      * If conditional pixel logic is enabled then only display the pixel
-     * if the affiliate source passed in the query string is the same
-     * as this name
+     * if the query string contains a key with this name
      *
      * @param null $store
      * @return string
      */
-    public function getSourceName($store=null)
+    public function getSourceKeyName($store=null)
     {
-        return Mage::getStoreConfig(self::SOURCE_NAME);
+        return Mage::getStoreConfig(self::SOURCE_KEY_NAME);
     }
     /**
      * Get the configured javascript files

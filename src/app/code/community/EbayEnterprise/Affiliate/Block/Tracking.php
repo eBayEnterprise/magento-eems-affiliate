@@ -16,20 +16,11 @@
 
 class EbayEnterprise_Affiliate_Block_Tracking extends Mage_Core_Block_Template
 {
-    protected $_order;
-    /**
-     * Get the last order.
-     * @return Mage_Sales_Model_Order | null
-     */
-    protected function _getOrder()
+    public function getQueryStringKeyName()
     {
-        if (!($this->_order instanceof Mage_Sales_Model_Order)) {
-            $orderId = Mage::getSingleton('checkout/session')->getLastOrderId();
-            if ($orderId) {
-                $this->_order = Mage::getModel('sales/order')->load($orderId);
-            }
-        }
-        return $this->_order;
+        $key = Mage::helper('eems_affiliate/config')->getSourceKeyName();
+        Mage::log("key: $key");
+        return "ebay_enterprise_affiliate_$key";
     }
 
     /**
@@ -39,9 +30,6 @@ class EbayEnterprise_Affiliate_Block_Tracking extends Mage_Core_Block_Template
      */
     public function injectJavaScript()
     {
-        return (
-            Mage::helper('eems_affiliate/config')->isEnabledConditionalPixel() &&
-            $this->_getOrder() instanceof Mage_Sales_Model_Order
-        );
+        return (Mage::helper('eems_affiliate/config')->isEnabledConditionalPixel());
     }
 } 

@@ -20,13 +20,13 @@
     (function () {
         var DURATION = 45;  // days
         var MILLISECONDS_IN_DAYS = 1000 * 60 * 60 * 24;
-        var COOKIE_NAME = 'source';
+        var COOKIE_NAME = "cookie" + "<?php $this->getQueryStringKeyName(); ?>";
         var query = location.search.substring(1);
-        var source = findAffiliateField(query, "source");
+        var source = findAffiliateField(query, COOKIE_NAME);
 
         if (source) {
             // set or update the cookie with the value from the current query string
-            setCookie("source", source, DURATION);
+            setCookie(COOKIE_NAME, source, DURATION);
         } else {
             // delete the cookie if it exists
             var cookie = getCookie(COOKIE_NAME);

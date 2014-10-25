@@ -97,16 +97,16 @@
                             <show_in_website>0</show_in_website>
                             <show_in_store>0</show_in_store>
                         </enabled_conditional_pixel>
-                        <source_name translate="label comment">
-                            <label>Affiliate Source Name</label>
-                            <comment>Only apply the pixel if the source is this affiliate.</comment>
+                        <source_key_name translate="label comment">
+                            <label>Query String Key Name</label>
+                            <comment>Only apply the pixel if the query string includes this key.</comment>
                             <frontend_type>text</frontend_type>
                             <depends><enabled_conditional_pixel>1</enabled_conditional_pixel></depends>
                             <sort_order>70</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>0</show_in_store>
-                        </source_name>
+                        </source_key_name>
 					</fields>
 				</eems_affiliate>
 				<eems_affiliate_product_attribute_map translate="label comment">

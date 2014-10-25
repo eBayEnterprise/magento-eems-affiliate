@@ -75,7 +75,7 @@
 				<program_id></program_id>
 				<transaction_type>1</transaction_type>
                 <enabled_conditional_pixel>0</enabled_conditional_pixel>
-                <source_name></source_name>
+                <source_key_name>source</source_key_name>
 				<feeds>
 					<callback_mappings>
 						<program_id>
