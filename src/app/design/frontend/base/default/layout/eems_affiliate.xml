@@ -17,9 +17,10 @@
 <layout version="0.1.0">
     <default>
         <reference name="head">
-            <action method="addJs" ifconfig="marketing_solutions/eems_affiliate/enabled_conditional_pixel">
+            <block type="eems_affiliate/tracking" name="eems_affiliate.tracking" template="eems_affiliate/tracking.phtml"/>
+            <!-- <action method="addJs" ifconfig="marketing_solutions/eems_affiliate/enabled_conditional_pixel">
                 <script>eems_affiliate/eems_affiliate.js</script>
-            </action>
+            </action> -->
         </reference>
     </default>
 	<checkout_affiliate_success translate="label">
