@@ -206,7 +206,7 @@ class EbayEnterprise_Affiliate_Block_Beacon extends Mage_Core_Block_Template
 		) {
 			if ($this->_getConfigHelper()->isEnabledConditionalPixel()) {
 				// conditional pixel logic is enabled in the admin panel, check if it is a valid cookie
-				return ($this->getHelper()->isValidCookie());
+				return ($this->_getHelper()->isValidCookie());
 			}
 
             return true;

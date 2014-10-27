@@ -18,21 +18,19 @@
     <?php $keyName = $this->getQueryStringKeyName(); ?>
     <script type="text/javascript">
         //<![CDATA[
-        (function () {
-            var DURATION = 45;  // days
-            var MILLISECONDS_IN_DAYS = 1000 * 60 * 60 * 24;
-            var COOKIE_NAME = "<?php echo $keyName; ?>";
+        (function (window, document, duration_in_days, cookie_name) {
+            var milliseconds_in_days = 1000 * 60 * 60 * 24;
             var query = location.search.substring(1);
-            var source = findAffiliateField(query, COOKIE_NAME);
-            var cookie = getCookie(COOKIE_NAME);
+            var source = findAffiliateField(query, cookie_name);
+            var cookie = getCookie(cookie_name);
 
             if (source) {
                 // set or update the cookie with the value from the current query string
-                setCookie(COOKIE_NAME, source, DURATION);
+                setCookie(cookie_name, source, duration_in_days);
             } else {
                 // delete the cookie if it exists
                 if (cookie) {
-                    setCookie(COOKIE_NAME, cookie[COOKIE_NAME], -1);
+                    setCookie(cookie_name, cookie[cookie_name], -1);
                 }
             }
 
@@ -45,7 +43,7 @@
             function setCookie(cname, cvalue, exdays)
             {
                 var d = new Date();
-                d.setTime(d.getTime() + (exdays * MILLISECONDS_IN_DAYS));
+                d.setTime(d.getTime() + (exdays * milliseconds_in_days));
                 var expires = "expires="+d.toUTCString();
                 document.cookie = cname + "=" + cvalue + "; " + expires;
             }
@@ -90,7 +88,7 @@
                     return null;
                 }
             }
-        }(document));
+        }(window, document, 45, "<?php echo $keyName ?>"));
         //]]>
     </script>
-<?endif?>
+<?endif;

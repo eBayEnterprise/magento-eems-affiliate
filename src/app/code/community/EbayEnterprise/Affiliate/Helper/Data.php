@@ -138,3 +138,4 @@ class EbayEnterprise_Affiliate_Helper_Data extends Mage_Core_Helper_Abstract
 		return ($value === self::SOURCE_KEY_VALUE);
 	}
 }
+
