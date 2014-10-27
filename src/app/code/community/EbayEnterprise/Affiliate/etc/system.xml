@@ -88,7 +88,7 @@
 							<show_in_website>0</show_in_website>
 							<show_in_store>0</show_in_store>
 						</export_path>
-                        <enabled_conditional_pixel translate="label">
+                        <conditional_pixel_enabled translate="label">
                             <label>Conditional Pixel</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
@@ -96,12 +96,12 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>0</show_in_store>
-                        </enabled_conditional_pixel>
+                        </conditional_pixel_enabled>
                         <source_key_name translate="label comment">
                             <label>Query String Key Name</label>
                             <comment>Only apply the pixel if the query string includes this key.</comment>
                             <frontend_type>text</frontend_type>
-                            <depends><enabled_conditional_pixel>1</enabled_conditional_pixel></depends>
+                            <depends><conditional_pixel_enabled>1</conditional_pixel_enabled></depends>
                             <sort_order>70</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>

@@ -58,6 +58,35 @@ class EbayEnterprise_Affiliate_Block_Beacon extends Mage_Core_Block_Template
 	 * @see self::_getOrder
 	 */
 	protected $_order;
+    /** @var  EbayEnterprise_Affiliate_Helper_Data */
+    protected $_helper = null;
+    /** @var  EbayEnterprise_Affiliate_Helper_Config */
+    protected $_configHelper = null;
+
+    /**
+     * @return EbayEnterprise_Affiliate_Helper_Data | null
+     */
+    protected function _getHelper()
+    {
+        if (!$this->_helper) {
+            $this->_helper = Mage::helper('eems_affiliate');
+        }
+
+        return $this->_helper;
+    }
+
+    /**
+     * @return EbayEnterprise_Affiliate_Helper_Config | null
+     */
+    protected function _getConfigHelper()
+    {
+        if (!$this->_configHelper) {
+            $this->_configHelper = Mage::helper('eems_affiliate/config');
+        }
+
+        return $this->_configHelper;
+    }
+
 	/**
 	 * Get the last order.
 	 * @return Mage_Sales_Model_Order | null
@@ -172,21 +201,17 @@ class EbayEnterprise_Affiliate_Block_Beacon extends Mage_Core_Block_Template
 	public function showBeacon()
 	{
 		if ( // the extension is enabled and we have an order
-			Mage::helper('eems_affiliate/config')->isEnabled() &&
+			$this->_getConfigHelper()->isEnabled() &&
 			$this->_getOrder() instanceof Mage_Sales_Model_Order
 		) {
-			if (Mage::helper('eems_affiliate/config')->isEnabledConditionalPixel()) {
-				// conditional pixel logic is enabled in the admin panel
-				if (Mage::helper('eems_affiliate')->isValidCookie()) {
-					return true;
-				} else {
-					return false;
-				}
-			} else {
-				return true;
+			if ($this->_getConfigHelper()->isEnabledConditionalPixel()) {
+				// conditional pixel logic is enabled in the admin panel, check if it is a valid cookie
+				return ($this->getHelper()->isValidCookie());
 			}
-		} else {
-			return false;
+
+            return true;
 		}
+
+        return false;
 	}
 }

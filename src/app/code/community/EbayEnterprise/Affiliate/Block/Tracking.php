@@ -16,18 +16,18 @@
 
 class EbayEnterprise_Affiliate_Block_Tracking extends Mage_Core_Block_Template
 {
-	public function getQueryStringKeyName()
-	{
-		return Mage::helper('eems_affiliate')->getSourceCookieName();
-	}
+    public function getQueryStringKeyName()
+    {
+        return Mage::helper('eems_affiliate')->getSourceCookieName();
+    }
 
-	/**
-	 * Whether or not to inject the javascript to set the tracking cookie
-	 *
-	 * @return bool
-	 */
-	public function injectJavaScript()
-	{
-		return (Mage::helper('eems_affiliate/config')->isEnabledConditionalPixel());
-	}
-} 
+    /**
+     * Whether or not to inject the javascript to set the tracking cookie
+     *
+     * @return bool
+     */
+    public function injectJavaScript()
+    {
+        return (Mage::helper('eems_affiliate/config')->isConditionalPixelEnabled());
+    }
+}

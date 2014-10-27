@@ -36,9 +36,8 @@ class EbayEnterprise_Affiliate_Helper_Config
 	const BASIC_ORDER_FEED_FILE_FORMAT_PATH = 'marketing_solutions/eems_affiliate/feeds/order_basic/file_name_format';
 	const ORDER_LAST_RUN_PATH = 'marketing_solutions/eems_affiliate/feed/last_run_time';
 	const JS_FILES = 'marketing_solutions/eems_affiliate/js_files';
-    const ENABLED_CONDITIONAL_PIXEL = 'marketing_solutions/eems_affiliate/enabled_conditional_pixel';
+    const CONDITIONAL_PIXEL_ENABLED = 'marketing_solutions/eems_affiliate/conditional_pixel_enabled';
     const SOURCE_KEY_NAME = 'marketing_solutions/eems_affiliate/source_key_name';
-
 	const TRANSACTION_TYPE_SALE = '1';
 	const TRANSACTION_TYPE_LEAD = '2';
 
@@ -198,9 +197,9 @@ class EbayEnterprise_Affiliate_Helper_Config
      * @param null $store
      * @return bool
      */
-    public function isEnabledConditionalPixel($store=null)
+    public function isConditionalPixelEnabled($store=null)
     {
-        return Mage::getStoreConfig(self::ENABLED_CONDITIONAL_PIXEL);
+        return Mage::getStoreConfig(self::CONDITIONAL_PIXEL_ENABLED);
     }
 
     /**
