@@ -216,13 +216,4 @@ class EbayEnterprise_Affiliate_Helper_Config
     {
         return Mage::getStoreConfig(self::SOURCE_KEY_NAME);
     }
-    /**
-     * Get the configured javascript files
-     * @param  mixed $store
-     * @return string
-     */
-    public function getJsFiles($store=null)
-    {
-        return Mage::getStoreConfig(static::JS_FILES, $store);
-    }
 }

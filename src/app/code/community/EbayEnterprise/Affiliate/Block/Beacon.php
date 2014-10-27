@@ -171,11 +171,12 @@ class EbayEnterprise_Affiliate_Block_Beacon extends Mage_Core_Block_Template
 	 */
 	public function showBeacon()
 	{
-		if (
+		if ( // the extension is enabled and we have an order
 			Mage::helper('eems_affiliate/config')->isEnabled() &&
 			$this->_getOrder() instanceof Mage_Sales_Model_Order
 		) {
 			if (Mage::helper('eems_affiliate/config')->isEnabledConditionalPixel()) {
+				// conditional pixel logic is enabled in the admin panel
 				if (Mage::helper('eems_affiliate')->isValidCookie()) {
 					return true;
 				} else {
