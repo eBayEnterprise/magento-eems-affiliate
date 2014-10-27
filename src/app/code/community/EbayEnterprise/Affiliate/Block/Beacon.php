@@ -171,9 +171,21 @@ class EbayEnterprise_Affiliate_Block_Beacon extends Mage_Core_Block_Template
 	 */
 	public function showBeacon()
 	{
-		return (
+		if (
 			Mage::helper('eems_affiliate/config')->isEnabled() &&
 			$this->_getOrder() instanceof Mage_Sales_Model_Order
-		);
+		) {
+			if (Mage::helper('eems_affiliate/config')->isEnabledConditionalPixel()) {
+				if (Mage::helper('eems_affiliate')->isValidCookie()) {
+					return true;
+				} else {
+					return false;
+				}
+			} else {
+				return true;
+			}
+		} else {
+			return false;
+		}
 	}
 }

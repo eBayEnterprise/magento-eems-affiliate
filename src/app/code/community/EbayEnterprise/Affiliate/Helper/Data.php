@@ -18,6 +18,9 @@
 
 class EbayEnterprise_Affiliate_Helper_Data extends Mage_Core_Helper_Abstract
 {
+	const SOURCE_KEY_VALUE = 'eean';
+	const SOURCE_COOKIE_PREFIX = 'ebay_enterprise_affiliate_';
+
 	/**
 	 * Build the beacon url given an array keys
 	 * @param array $params
@@ -100,5 +103,24 @@ class EbayEnterprise_Affiliate_Helper_Data extends Mage_Core_Helper_Abstract
 	public function parseBoolToYesNo($value)
 	{
 		return $value?'yes':'no';
+	}
+
+	public function getSourceCookieName()
+	{
+		$key = Mage::helper('eems_affiliate/config')->getSourceKeyName();
+
+		return self::SOURCE_COOKIE_PREFIX.$key;
+	}
+
+	public function isValidCookie()
+	{
+		$cookie = $this->getSourceCookieName();
+		if (!isset($_COOKIE[$cookie])) {
+			return false;
+		}
+
+		$value = $_COOKIE[$cookie];
+
+		return ($value === self::SOURCE_KEY_VALUE);
 	}
 }
