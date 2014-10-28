@@ -16,12 +16,13 @@
 
 <?php if ($this->injectJavaScript()): ?>
     <?php $keyName = $this->getQueryStringKeyName(); ?>
+    <?php $cookieName = $this->getCookieName(); ?>
     <script type="text/javascript">
         //<![CDATA[
-        (function (window, document, duration_in_days, cookie_name) {
+        (function (window, document, duration_in_days, key_name, cookie_name) {
             var milliseconds_in_days = 1000 * 60 * 60 * 24;
             var query = location.search.substring(1);
-            var source = findAffiliateField(query, cookie_name);
+            var source = findAffiliateField(query, key_name);
             var cookie = getCookie(cookie_name);
 
             if (source) {
@@ -58,6 +59,8 @@
                 var cookies = document.cookie.split(';');
                 for (var i = 0; i < cookies.length; i++) {
                     var keyPair = cookies[i].split('=');
+                    if (keyPair.length < 2)
+                        continue;
                     var field = keyPair[0].trim();
                     var value = keyPair[1].trim();
 
@@ -80,15 +83,19 @@
                 if (!query || (query === ""))
                     return null;
 
-                var start = query.substring(field + "=");
-                if (start) {
-                    var keyPair = start.split("=");
-                    return keyPair[1] || null;
-                } else {
-                    return null;
+                var fields = query.split("&");
+                for (var i = 0; i < fields.length; i++) {
+                    var start = fields[i].indexOf(field + "=");
+                    if (start >= 0) {
+                        var substr = fields[i].substring(start);
+                        var keyPair = substr.split("=");
+                        return keyPair[1] || null;
+                    }
                 }
+
+                return null;
             }
-        }(window, document, 45, "<?php echo $keyName ?>"));
+        }(window, document, 45, "<?php echo $keyName ?>", "<?php echo $cookieName ?>"));
         //]]>
     </script>
 <?endif;

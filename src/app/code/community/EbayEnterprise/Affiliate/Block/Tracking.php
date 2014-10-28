@@ -16,9 +16,20 @@
 
 class EbayEnterprise_Affiliate_Block_Tracking extends Mage_Core_Block_Template
 {
-    public function getQueryStringKeyName()
+    /**
+     * @return string | null
+     */
+    public function getCookieName()
     {
         return Mage::helper('eems_affiliate')->getSourceCookieName();
+    }
+
+    /**
+     * @return string | null
+     */
+    public function getQueryStringKeyName()
+    {
+        return Mage::helper('eems_affiliate/config')->getSourceKeyName();
     }
 
     /**
