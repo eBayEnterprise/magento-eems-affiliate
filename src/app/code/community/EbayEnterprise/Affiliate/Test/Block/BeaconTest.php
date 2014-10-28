@@ -215,25 +215,36 @@ class EbayEnterprise_Affiliate_Test_Block_BeaconTest
 	}
 	/**
 	 * Test that EbayEnterprise_Affiliate_Block_Beacon::showBeacon will return true
-	 * when invoke by this test.
+	 * only if tracking is enabled and we have a valid order
+     * AND either conditional pixel logic is OFF or it is ON and we have
+     * a valid cookie.
+     *
+     * @dataProvider dataProvider
 	 */
-	public function testShowBeacon()
+	public function testShowBeacon($isEnabled, $isOrder, $isPixelLogicEnabled, $isValidCookie, $expectedResult)
 	{
-		$result = true;
-		$isEnabled = true;
-		$order = Mage::getModel('sales/order');
-
-		$configHelper = $this->getHelperMock('eems_affiliate/config', array('isEnabled'));
-		$configHelper->expects($this->once())
+        $configHelper = $this->getHelperMock('eems_affiliate/config', array('isEnabled', 'isConditionalPixelEnabled'));
+		$configHelper->expects($this->any())
 			->method('isEnabled')
 			->will($this->returnValue($isEnabled));
-		$this->replaceByMock('helper', 'eems_affiliate/config', $configHelper);
 
-		$beacon = $this->getBlockMock('eems_affiliate/beacon', array('_getOrder'));
-		$beacon->expects($this->once())
+        $configHelper->expects($this->any())
+            ->method('isConditionalPixelEnabled')
+            ->will($this->returnValue($isPixelLogicEnabled));
+        $this->replaceByMock('helper', 'eems_affiliate/config', $configHelper);
+
+        $dataHelper = $this->getHelperMock('eems_affiliate', array('isValidCookie'));
+        $dataHelper->expects(($this->any()))
+            ->method('isValidCookie')
+            ->will($this->returnValue($isValidCookie));
+        $this->replaceByMock('helper', 'eems_affiliate', $dataHelper);
+
+        $order = (bool)$isOrder ? Mage::getModel('sales/order') : null;
+        $beacon = $this->getBlockMock('eems_affiliate/beacon', array('_getOrder'));
+		$beacon->expects($this->any())
 			->method('_getOrder')
 			->will($this->returnValue($order));
 
-		$this->assertSame($result, $beacon->showBeacon());
+        $this->assertEquals((bool)$expectedResult, $beacon->showBeacon());
 	}
 }

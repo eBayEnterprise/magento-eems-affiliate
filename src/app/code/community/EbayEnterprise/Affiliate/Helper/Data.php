@@ -109,7 +109,7 @@ class EbayEnterprise_Affiliate_Helper_Data extends Mage_Core_Helper_Abstract
 
 	/**
 	 * helper function to take the source key name set in the admin panel
-	 * add prepend a string to create a unique name for the cookie
+	 * and prepend a string to create a unique name for the cookie
 	 *
 	 * @return string
 	 */

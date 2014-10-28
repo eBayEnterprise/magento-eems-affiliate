@@ -196,6 +196,11 @@ class EbayEnterprise_Affiliate_Block_Beacon extends Mage_Core_Block_Template
 	}
 	/**
 	 * Whether or not to display the beacon.
+     *
+     * Show the pixel only if tracking is enabled and we have a valid order
+     * AND either conditional pixel logic is OFF or it is ON and we have
+     * a valid cookie.
+     *
 	 * @return bool
 	 */
 	public function showBeacon()
@@ -203,10 +208,14 @@ class EbayEnterprise_Affiliate_Block_Beacon extends Mage_Core_Block_Template
         $config = $this->_getConfigHelper();
 
         return (bool)(
-            $config->isEnabled() &&
-            $this->_getOrder() instanceof Mage_Sales_Model_Order &&
-            $this->_getHelper()->isValidCookie() ||
-            !$config->isConditionalPixelEnabled()
+            (
+                $config->isEnabled() &&
+                $this->_getOrder() instanceof Mage_Sales_Model_Order
+            ) &&
+            (
+                $this->_getHelper()->isValidCookie() ||
+                !$config->isConditionalPixelEnabled()
+            )
         );
     }
 }

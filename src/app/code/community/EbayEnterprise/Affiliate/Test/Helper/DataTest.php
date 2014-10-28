@@ -36,4 +36,20 @@ class EbayEnterprise_Affiliate_Test_Helper_DataTest
 
 		$this->assertSame($result, Mage::helper('eems_affiliate/data')->buildBeaconUrl($params));
 	}
+
+    /**
+     * @dataProvider dataProvider
+     */
+    public function testIsValidCookie($cookie, $value, $expectedResult)
+    {
+        $dataHelper = $this->getHelperMock('eems_affiliate', array('getSourceCookieName'));
+        $dataHelper->expects(($this->any()))
+            ->method('getSourceCookieName')
+            ->will($this->returnValue('ebay_enterprise_affiliate_source'));
+        $this->replaceByMock('helper', 'eems_affiliate', $dataHelper);
+
+        $_COOKIE[$cookie] = $value;
+
+        $this->assertEquals((bool)$expectedResult, $dataHelper->isValidCookie());
+    }
 }
