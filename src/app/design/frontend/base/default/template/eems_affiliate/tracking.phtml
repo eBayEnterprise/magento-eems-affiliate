@@ -28,15 +28,9 @@
             if (source) {
                 // set or update the cookie with the value from the current query string
                 setCookie(cookie_name, source, duration_in_days);
-            } else {
-                // delete the cookie if it exists
-                if (cookie) {
-                    setCookie(cookie_name, cookie[cookie_name], -1);
-                }
             }
 
             /**
-             *
              * @param cname name of the cookie
              * @param cvalue value assigned to cookie
              * @param exdays duration of the cookie in days
@@ -46,11 +40,10 @@
                 var d = new Date();
                 d.setTime(d.getTime() + (exdays * milliseconds_in_days));
                 var expires = "expires="+d.toUTCString();
-                document.cookie = cname + "=" + cvalue + "; " + expires;
+                document.cookie = cname + "=" + cvalue + "; " + expires + "; path=/";
             }
 
             /**
-             *
              * @param cname name of the cookie
              * @returns object | null object with the field and value or null if not found
              */
@@ -73,7 +66,6 @@
             }
 
             /**
-             *
              * @param query query string  minus the '?'
              * @param field query string field to search for
              * @returns string | null value of the query string field or null if the field isn't there
@@ -85,11 +77,12 @@
 
                 var fields = query.split("&");
                 for (var i = 0; i < fields.length; i++) {
-                    var start = fields[i].indexOf(field + "=");
-                    if (start >= 0) {
-                        var substr = fields[i].substring(start);
-                        var keyPair = substr.split("=");
-                        return keyPair[1] || null;
+                    var keyPair = fields[i].split("=");
+                    if (
+                        keyPair.length == 2 &&
+                        keyPair[0] === field
+                    ) {
+                        return keyPair[1];
                     }
                 }
 

@@ -64,7 +64,7 @@ class EbayEnterprise_Affiliate_Block_Beacon extends Mage_Core_Block_Template
     protected $_configHelper = null;
 
     /**
-     * @return EbayEnterprise_Affiliate_Helper_Data | null
+     * @return EbayEnterprise_Affiliate_Helper_Data
      */
     protected function _getHelper()
     {
@@ -76,7 +76,7 @@ class EbayEnterprise_Affiliate_Block_Beacon extends Mage_Core_Block_Template
     }
 
     /**
-     * @return EbayEnterprise_Affiliate_Helper_Config | null
+     * @return EbayEnterprise_Affiliate_Helper_Config
      */
     protected function _getConfigHelper()
     {
@@ -207,7 +207,7 @@ class EbayEnterprise_Affiliate_Block_Beacon extends Mage_Core_Block_Template
     {
         $config = $this->_getConfigHelper();
 
-        return (bool)(
+        return (
             (
                 $config->isEnabled() &&
                 $this->_getOrder() instanceof Mage_Sales_Model_Order

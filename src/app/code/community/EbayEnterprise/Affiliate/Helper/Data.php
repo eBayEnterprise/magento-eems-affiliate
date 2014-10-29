@@ -129,13 +129,8 @@ class EbayEnterprise_Affiliate_Helper_Data extends Mage_Core_Helper_Abstract
 	public function isValidCookie()
 	{
 		$cookie = $this->getSourceCookieName();
-		if (!isset($_COOKIE[$cookie])) {
-			return false;
-		}
-
-		$value = $_COOKIE[$cookie];
-
-		return ($value === self::SOURCE_KEY_VALUE);
+        $value = Mage::getModel('core/cookie')->get($cookie);
+        return ($value === self::SOURCE_KEY_VALUE);
 	}
 }
 
