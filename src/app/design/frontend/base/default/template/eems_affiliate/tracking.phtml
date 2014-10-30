@@ -72,8 +72,9 @@
              */
             function findAffiliateField(query, field)
             {
-                if (!query || (query === ""))
+                if (!query) {
                     return null;
+                }
 
                 var fields = query.split("&");
                 for (var i = 0; i < fields.length; i++) {
