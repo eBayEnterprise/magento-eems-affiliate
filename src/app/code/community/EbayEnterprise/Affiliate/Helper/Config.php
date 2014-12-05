@@ -199,7 +199,7 @@ class EbayEnterprise_Affiliate_Helper_Config
      */
     public function isConditionalPixelEnabled($store=null)
     {
-        return Mage::getStoreConfig(self::CONDITIONAL_PIXEL_ENABLED);
+        return Mage::getStoreConfig(self::CONDITIONAL_PIXEL_ENABLED, $store);
     }
 
     /**
@@ -213,6 +213,6 @@ class EbayEnterprise_Affiliate_Helper_Config
      */
     public function getSourceKeyName($store=null)
     {
-        return Mage::getStoreConfig(self::SOURCE_KEY_NAME);
+        return Mage::getStoreConfig(self::SOURCE_KEY_NAME, $store);
     }
 }
