@@ -96,3 +96,11 @@ xmllint:
         - .:/srv/magento
     command: sh -c 'find src \( -name "*.xml" -o -name "*.xsd" -o -name "*.xsl" \) -print0 |
                     xargs -0 -n1 -P6 -- xmllint --noout'
+webapp:
+    image: kojiromike/magento_apache
+    volumes:
+        - build/magento:/srv/magento
+    links:
+        - db
+    ports:
+        - "80:80"
