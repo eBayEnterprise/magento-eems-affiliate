@@ -48,7 +48,7 @@
 	<crontab>
 		<jobs>
 			<eems_affiliate_generate_product_feed>
-				<schedule><cron_expr>* */3 * * *</cron_expr></schedule>
+				<schedule><cron_expr>0 */3 * * *</cron_expr></schedule>
 				<run>
 					<model>eems_affiliate/observer::createProductFeed</model>
 				</run>
