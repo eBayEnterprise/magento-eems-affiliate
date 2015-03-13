@@ -171,19 +171,18 @@ class EbayEnterprise_Affiliate_Helper_Config
 	 * Update the last run time of the order create feed to the specified time,
 	 * or the current time it no time is given. Always set globally so no need to
 	 * ever be given a store context.
-	 * @param  mixed $store
 	 * @param  string $time
 	 * @return self
 	 */
 	public function updateOrderLastRunTime($time=null)
 	{
 		Mage::getConfig()->saveConfig(self::ORDER_LAST_RUN_PATH, $time ?: time());
+		Mage::app()->getStore()->resetConfig();
 		return $this;
 	}
 	/**
 	 * Get the last time the order corrections feed was run. Returns the string
 	 * value saved in config. Always set globally so no need for a store context.
-	 * @param  mixed $store
 	 * @return string
 	 */
 	public function getOrderLastRunTime()
@@ -191,28 +190,28 @@ class EbayEnterprise_Affiliate_Helper_Config
 		return Mage::getStoreConfig(self::ORDER_LAST_RUN_PATH);
 	}
 
-    /**
-     * Enable/disable conditional pixel logic
-     *
-     * @param null $store
-     * @return bool
-     */
-    public function isConditionalPixelEnabled($store=null)
-    {
-        return Mage::getStoreConfig(self::CONDITIONAL_PIXEL_ENABLED, $store);
-    }
+	/**
+	 * Enable/disable conditional pixel logic
+	 *
+	 * @param null $store
+	 * @return bool
+	 */
+	public function isConditionalPixelEnabled($store=null)
+	{
+	    return Mage::getStoreConfig(self::CONDITIONAL_PIXEL_ENABLED, $store);
+	}
 
-    /**
-     * Name of the affiliate source
-     *
-     * If conditional pixel logic is enabled then only display the pixel
-     * if the query string contains a key with this name
-     *
-     * @param null $store
-     * @return string
-     */
-    public function getSourceKeyName($store=null)
-    {
-        return Mage::getStoreConfig(self::SOURCE_KEY_NAME, $store);
-    }
+	/**
+	 * Name of the affiliate source
+	 *
+	 * If conditional pixel logic is enabled then only display the pixel
+	 * if the query string contains a key with this name
+	 *
+	 * @param null $store
+	 * @return string
+	 */
+	public function getSourceKeyName($store=null)
+	{
+	    return Mage::getStoreConfig(self::SOURCE_KEY_NAME, $store);
+	}
 }
