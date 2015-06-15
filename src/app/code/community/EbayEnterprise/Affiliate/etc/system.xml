@@ -1,93 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Copyright (c) 2014 eBay Enterprise, Inc.
+Copyright (c) 2014 eBay Enterprise, Inc.
 
-  NOTICE OF LICENSE
+NOTICE OF LICENSE
 
-  This source file is subject to the eBay Enterprise
-  Magento Extensions End User License Agreement
-  that is bundled with this package in the file LICENSE.md.
-  It is also available through the world-wide-web at this URL:
-  http://www.ebayenterprise.com/files/pdf/Magento_Connect_Extensions_EULA_050714.pdf
+This source file is subject to the eBay Enterprise
+Magento Extensions End User License Agreement
+that is bundled with this package in the file LICENSE.md.
+It is also available through the world-wide-web at this URL:
+http://www.ebayenterprise.com/files/pdf/Magento_Connect_Extensions_EULA_050714.pdf
 
-  @copyright   Copyright (c) 2014 eBay Enterprise, Inc. (http://www.ebayenterprise.com/)
-  @license     http://www.ebayenterprise.com/files/pdf/Magento_Connect_Extensions_EULA_050714.pdf  eBay Enterprise Magento Extensions End User License Agreement
-
+@copyright   Copyright (c) 2014 eBay Enterprise, Inc. (http://www.ebayenterprise.com/)
+@license     http://www.ebayenterprise.com/files/pdf/Magento_Connect_Extensions_EULA_050714.pdf  eBay Enterprise Magento Extensions End User License Agreement
 -->
 <config>
-	<tabs>
-		<ebayenterprise translate="label" module="eems_affiliate">
-			<label>eBay Enterprise</label>
-			<sort_order>550</sort_order>
-		</ebayenterprise>
-	</tabs>
-	<sections>
-		<marketing_solutions translate="label" module="eems_affiliate">
-			<class>separator-top</class>
-			<label>Marketing Solutions</label>
-			<tab>ebayenterprise</tab>
-			<frontend_type>text</frontend_type>
-			<sort_order>550</sort_order>
-			<show_in_default>1</show_in_default>
-			<show_in_website>1</show_in_website>
-			<show_in_store>1</show_in_store>
-			<groups>
-				<eems_affiliate translate="label comment">
-					<label>Affiliate</label>
-					<comment><![CDATA[Your program ID and other information can be found within your EEAN advertiser account. Don’t have an account yet? <a href='https://www.pepperjamnetwork.com/register/basic' target='_pjregister'>Register</a> for one today!]]></comment>
-					<frontend_type>text</frontend_type>
-					<sort_order>100</sort_order>
-					<show_in_default>1</show_in_default>
-					<show_in_website>1</show_in_website>
-					<show_in_store>1</show_in_store>
-					<fields>
-						<active translate="label">
-							<label>Enable Affiliate Tracking</label>
-							<frontend_type>select</frontend_type>
-							<source_model>adminhtml/system_config_source_yesno</source_model>
-							<sort_order>1</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</active>
-						<program_id translate="label comment">
-							<label>Program Id</label>
-							<comment>Your Program Id will be provided to you by eBay Enterprise Affiliate</comment>
-							<frontend_type>text</frontend_type>
-							<sort_order>10</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>1</show_in_website>
-							<show_in_store>0</show_in_store>
-						</program_id>
-						<itemized_orders translate="label">
-							<label>Itemized Orders</label>
-							<frontend_type>select</frontend_type>
-							<source_model>adminhtml/system_config_source_yesno</source_model>
-							<sort_order>20</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</itemized_orders>
-						<transaction_type translate="label comment">
-							<label>Transaction Type</label>
-							<comment>Sale transactions pay publishers a percentage of the sale, lead transactions pay publishes a flat amount for an action.</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_transactiontype</source_model>
-							<depends><itemized_orders>0</itemized_orders></depends>
-							<sort_order>30</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</transaction_type>
-						<export_path translate="label comment">
-							<label>Export Path</label>
-							<comment>Default local path to export feeds to. These feeds will need to be made available to eBay Enterprise Affiliate via FTP.</comment>
-							<frontend_type>text</frontend_type>
-							<sort_order>50</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</export_path>
+    <tabs>
+        <ebayenterprise translate="label" module="eems_affiliate">
+            <label>eBay Enterprise</label>
+            <sort_order>550</sort_order>
+        </ebayenterprise>
+    </tabs>
+    <sections>
+        <marketing_solutions translate="label" module="eems_affiliate">
+            <class>separator-top</class>
+            <label>Marketing Solutions</label>
+            <tab>ebayenterprise</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>550</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <eems_affiliate translate="label comment">
+                    <label>Affiliate</label>
+                    <comment><![CDATA[Your program ID and other information can be found within your EEAN advertiser account. Don’t have an account yet? <a href='https://www.pepperjamnetwork.com/register/basic' target='_pjregister'>Register</a> for one today!]]></comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Enable Affiliate Tracking</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+                        <program_id translate="label comment">
+                            <label>Program Id</label>
+                            <comment>Your Program Id will be provided to you by eBay Enterprise Affiliate</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </program_id>
+                        <itemized_orders translate="label">
+                            <label>Itemized Orders</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </itemized_orders>
+                        <transaction_type translate="label comment">
+                            <label>Transaction Type</label>
+                            <comment>Sale transactions pay publishers a percentage of the sale, lead transactions pay publishes a flat amount for an action.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_transactiontype</source_model>
+                            <depends>
+                                <itemized_orders>0</itemized_orders>
+                            </depends>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </transaction_type>
+                        <export_path translate="label comment">
+                            <label>Export Path</label>
+                            <comment>Default local path to export feeds to. These feeds will need to be made available to eBay Enterprise Affiliate via FTP.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </export_path>
                         <conditional_pixel_enabled translate="label">
                             <label>Conditional Pixel</label>
                             <frontend_type>select</frontend_type>
@@ -101,810 +102,812 @@
                             <label>Query String Key Name</label>
                             <comment>Only apply the pixel if the query string includes this key.</comment>
                             <frontend_type>text</frontend_type>
-                            <depends><conditional_pixel_enabled>1</conditional_pixel_enabled></depends>
+                            <depends>
+                                <conditional_pixel_enabled>1</conditional_pixel_enabled>
+                            </depends>
                             <sort_order>70</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>0</show_in_store>
                         </source_key_name>
-					</fields>
-				</eems_affiliate>
-				<eems_affiliate_product_attribute_map translate="label comment">
-					<label>Affiliate Product Feed Map</label>
-					<frontend_type>text</frontend_type>
-					<sort_order>101</sort_order>
-					<show_in_default>1</show_in_default>
-					<show_in_website>1</show_in_website>
-					<show_in_store>0</show_in_store>
-					<fields>
-						<age_range translate="label">
-							<label>age_range</label>
-							<comment>Suggested age range</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>1</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</age_range>
-						<artist translate="label">
-							<label>artist</label>
-							<comment>Media artist</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>2</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</artist>
-						<aspect_ratio translate="label">
-							<label>aspect_ratio</label>
-							<comment>Screen aspect ratio</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>3</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</aspect_ratio>
-						<author translate="label">
-							<label>author</label>
-							<comment>Media author</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>4</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</author>
-						<battery_life translate="label">
-							<label>battery_life</label>
-							<comment>Battery life</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>5</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</battery_life>
-						<binding translate="label">
-							<label>binding</label>
-							<comment>Book binding</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>6</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</binding>
-						<buy_url translate="label">
-							<label>buy_url</label>
-							<comment>Destination URL (Required)</comment>
-							<frontend_type>select</frontend_type>
-							<validate>required-entry</validate>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>7</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</buy_url>
-						<category_network translate="label">
-							<label>category_network</label>
-							<comment>eBay Enterprise Affiliate Network specific category (sub categories optionally delimited by '>')</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>8</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</category_network>
-						<category_program translate="label">
-							<label>category_program</label>
-							<comment>Merchant specific category (sub categories optionally delimited by '>') (Recommended)</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_categories</source_model>
-							<sort_order>9</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</category_program>
-						<color translate="label">
-							<label>color</label>
-							<comment>Color of item</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>10</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</color>
-						<color_output translate="label">
-							<label>color_output</label>
-							<comment>Whether output is color or not</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>11</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</color_output>
-						<condition translate="label">
-							<label>condition</label>
-							<comment>Condition (Recommended)</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>12</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</condition>
-						<description_long translate="label">
-							<label>description_long</label>
-							<comment>Long description (Required)</comment>
-							<frontend_type>select</frontend_type>
-							<validate>required-entry</validate>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>13</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</description_long>
-						<description_short translate="label">
-							<label>description_short</label>
-							<comment>Short description</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>14</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</description_short>
-						<director translate="label">
-							<label>director</label>
-							<comment>Movie director</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>15</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</director>
-						<discontinued translate="label">
-							<label>discontinued</label>
-							<comment>Whether product is discontinued or not</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>16</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</discontinued>
-						<display_type translate="label">
-							<label>display_type</label>
-							<comment>Display type</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>17</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</display_type>
-						<edition translate="label">
-							<label>edition</label>
-							<comment>Media edition</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>18</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</edition>
-						<expiration_date translate="label">
-							<label>expiration_date</label>
-							<comment>Expiration date</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>19</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</expiration_date>
-						<features translate="label">
-							<label>features</label>
-							<comment>Special features</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>20</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</features>
-						<focus_type translate="label">
-							<label>focus_type</label>
-							<comment>Focus type</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>21</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</focus_type>
-						<format translate="label">
-							<label>format</label>
-							<comment>Format</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>22</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</format>
-						<functions translate="label">
-							<label>functions</label>
-							<comment>Functions</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>23</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</functions>
-						<genre translate="label">
-							<label>genre</label>
-							<comment>Genre</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>24</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</genre>
-						<heel_height translate="label">
-							<label>heel_height</label>
-							<comment>Heel height</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>25</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</heel_height>
-						<height translate="label">
-							<label>height</label>
-							<comment>Height</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>26</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</height>
-						<image_thumb_url translate="label">
-							<label>image_thumb_url</label>
-							<comment>Thumbnail image URL (Recommended)</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>27</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</image_thumb_url>
-						<image_url translate="label">
-							<label>image_url</label>
-							<comment>Standard image URL (Required)</comment>
-							<frontend_type>select</frontend_type>
-							<validate>required-entry</validate>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>28</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</image_url>
-						<installation translate="label">
-							<label>installation</label>
-							<comment>Installation type</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>29</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</installation>
-						<in_stock translate="label">
-							<label>in_stock</label>
-							<comment>Whether product is in stock or not</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_stockyesno</source_model>
-							<sort_order>30</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</in_stock>
-						<isbn translate="label">
-							<label>isbn</label>
-							<comment>Book ISBN</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>31</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</isbn>
-						<keywords translate="label">
-							<label>keywords</label>
-							<comment>Space separated list of keywords (Recommended)</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>32</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</keywords>
-						<length translate="label">
-							<label>length</label>
-							<comment>Length</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>33</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</length>
-						<load_type translate="label">
-							<label>load_type</label>
-							<comment>Load type</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>34</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</load_type>
-						<location translate="label">
-							<label>location</label>
-							<comment>Shipping location</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>35</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</location>
-						<made_in translate="label">
-							<label>made_in</label>
-							<comment>Manufacturing country</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>36</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</made_in>
-						<manufacturer translate="label">
-							<label>manufacturer</label>
-							<comment>Manufacturer or brand (Recommended)</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>37</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</manufacturer>
-						<material translate="label">
-							<label>material</label>
-							<comment>Construction material</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>38</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</material>
-						<megapixels translate="label">
-							<label>megapixels</label>
-							<comment>Megapixels</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>39</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</megapixels>
-						<memory_capacity translate="label">
-							<label>memory_capacity</label>
-							<comment>Memory capacity</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>40</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</memory_capacity>
-						<memory_card_slot translate="label">
-							<label>memory_card_slot</label>
-							<comment>Memory card slot type</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>41</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</memory_card_slot>
-						<memory_type translate="label">
-							<label>memory_type</label>
-							<comment>Memory type</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>42</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</memory_type>
-						<model_number translate="label">
-							<label>model_number</label>
-							<comment>Model number</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>43</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</model_number>
-						<mpn translate="label">
-							<label>mpn</label>
-							<comment>Manufacturer part number</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>44</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</mpn>
-						<name translate="label">
-							<label>name</label>
-							<comment>Name or title (Required)</comment>
-							<frontend_type>select</frontend_type>
-							<validate>required-entry</validate>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>45</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</name>
-						<occasion translate="label">
-							<label>occasion</label>
-							<comment>Recommended usage occasion</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>46</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</occasion>
-						<operating_system translate="label">
-							<label>operating_system</label>
-							<comment>Operating system</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>47</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</operating_system>
-						<optical_drive translate="label">
-							<label>optical_drive</label>
-							<comment>Optical drive type</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>48</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</optical_drive>
-						<pages translate="label">
-							<label>pages</label>
-							<comment>Number of pages</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>49</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</pages>
-						<payment_accepted translate="label">
-							<label>payment_accepted</label>
-							<comment>Accepted payment methods</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>50</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</payment_accepted>
-						<payment_notes translate="label">
-							<label>payment_notes</label>
-							<comment>Additional payment notes</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>51</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</payment_notes>
-						<platform translate="label">
-							<label>platform</label>
-							<comment>Platform</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>52</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</platform>
-						<price translate="label">
-							<label>price</label>
-							<comment>Selling price (Required)</comment>
-							<frontend_type>select</frontend_type>
-							<validate>required-entry</validate>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>53</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</price>
-						<price_retail translate="label">
-							<label>price_retail</label>
-							<comment>Manufacturer suggested retail price</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>54</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</price_retail>
-						<price_sale translate="label">
-							<label>price_sale</label>
-							<comment>Discount price</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>55</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</price_sale>
-						<price_shipping translate="label">
-							<label>price_shipping</label>
-							<comment>Shipping price</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>56</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</price_shipping>
-						<processor translate="label">
-							<label>processor</label>
-							<comment>Processor type</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>57</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</processor>
-						<publisher translate="label">
-							<label>publisher</label>
-							<comment>Publisher</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>58</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</publisher>
-						<quantity_in_stock translate="label">
-							<label>quantity_in_stock</label>
-							<comment>Number of items in stock</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_stockquantity</source_model>
-							<sort_order>59</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</quantity_in_stock>
-						<rating translate="label">
-							<label>rating</label>
-							<comment>Rating</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>60</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</rating>
-						<recommended_usage translate="label">
-							<label>recommended_usage</label>
-							<comment>Recommended usage</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>61</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</recommended_usage>
-						<resolution translate="label">
-							<label>resolution</label>
-							<comment>Screen resolution</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>62</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</resolution>
-						<screen_size translate="label">
-							<label>screen_size</label>
-							<comment>Screen size</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>63</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</screen_size>
-						<shipping_method translate="label">
-							<label>shipping_method</label>
-							<comment>Shipping methods</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>64</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</shipping_method>
-						<shoe_size translate="label">
-							<label>shoe_size</label>
-							<comment>Shoe size</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>65</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</shoe_size>
-						<shoe_width translate="label">
-							<label>shoe_width</label>
-							<comment>Shoe width</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>66</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</shoe_width>
-						<size translate="label">
-							<label>size</label>
-							<comment>Size</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>67</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</size>
-						<sku translate="label">
-							<label>sku</label>
-							<comment>Stock keeping unit (Recommended)</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>68</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</sku>
-						<staring translate="label">
-							<label>staring</label>
-							<comment>Staring actors</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>69</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</staring>
-						<style translate="label">
-							<label>style</label>
-							<comment>Style</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>70</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</style>
-						<tech_spec_url translate="label">
-							<label>tech_spec_url</label>
-							<comment>Technical specifications URL</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>71</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</tech_spec_url>
-						<tracks translate="label">
-							<label>tracks</label>
-							<comment>Total number of tracks</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>72</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</tracks>
-						<upc translate="label">
-							<label>upc</label>
-							<comment>Universal product code (Recommended)</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>73</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</upc>
-						<weight translate="label">
-							<label>weight</label>
-							<comment>Weight</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>74</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</weight>
-						<width translate="label">
-							<label>width</label>
-							<comment>Width</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>75</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</width>
-						<wireless_interface translate="label">
-							<label>wireless_interface</label>
-							<comment>Wireless interface</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>76</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</wireless_interface>
-						<year translate="label">
-							<label>year</label>
-							<comment>Year of manufacture - YYYY</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>77</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</year>
-						<zoom translate="label">
-							<label>zoom</label>
-							<comment>Maximum zoom</comment>
-							<frontend_type>select</frontend_type>
-							<source_model>eems_affiliate/system_config_source_attributes</source_model>
-							<sort_order>78</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>0</show_in_website>
-							<show_in_store>0</show_in_store>
-						</zoom>
-					</fields>
-				</eems_affiliate_product_attribute_map>
-			</groups>
-		</marketing_solutions>
-	</sections>
+                    </fields>
+                </eems_affiliate>
+                <eems_affiliate_product_attribute_map translate="label comment">
+                    <label>Affiliate Product Feed Map</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>101</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <age_range translate="label">
+                            <label>age_range</label>
+                            <comment>Suggested age range</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </age_range>
+                        <artist translate="label">
+                            <label>artist</label>
+                            <comment>Media artist</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </artist>
+                        <aspect_ratio translate="label">
+                            <label>aspect_ratio</label>
+                            <comment>Screen aspect ratio</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </aspect_ratio>
+                        <author translate="label">
+                            <label>author</label>
+                            <comment>Media author</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </author>
+                        <battery_life translate="label">
+                            <label>battery_life</label>
+                            <comment>Battery life</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </battery_life>
+                        <binding translate="label">
+                            <label>binding</label>
+                            <comment>Book binding</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </binding>
+                        <buy_url translate="label">
+                            <label>buy_url</label>
+                            <comment>Destination URL (Required)</comment>
+                            <frontend_type>select</frontend_type>
+                            <validate>required-entry</validate>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </buy_url>
+                        <category_network translate="label">
+                            <label>category_network</label>
+                            <comment>eBay Enterprise Affiliate Network specific category (sub categories optionally delimited by '&gt;')</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </category_network>
+                        <category_program translate="label">
+                            <label>category_program</label>
+                            <comment>Merchant specific category (sub categories optionally delimited by '&gt;') (Recommended)</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_categories</source_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </category_program>
+                        <color translate="label">
+                            <label>color</label>
+                            <comment>Color of item</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </color>
+                        <color_output translate="label">
+                            <label>color_output</label>
+                            <comment>Whether output is color or not</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </color_output>
+                        <condition translate="label">
+                            <label>condition</label>
+                            <comment>Condition (Recommended)</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </condition>
+                        <description_long translate="label">
+                            <label>description_long</label>
+                            <comment>Long description (Required)</comment>
+                            <frontend_type>select</frontend_type>
+                            <validate>required-entry</validate>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </description_long>
+                        <description_short translate="label">
+                            <label>description_short</label>
+                            <comment>Short description</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>14</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </description_short>
+                        <director translate="label">
+                            <label>director</label>
+                            <comment>Movie director</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </director>
+                        <discontinued translate="label">
+                            <label>discontinued</label>
+                            <comment>Whether product is discontinued or not</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>16</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </discontinued>
+                        <display_type translate="label">
+                            <label>display_type</label>
+                            <comment>Display type</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>17</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </display_type>
+                        <edition translate="label">
+                            <label>edition</label>
+                            <comment>Media edition</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>18</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </edition>
+                        <expiration_date translate="label">
+                            <label>expiration_date</label>
+                            <comment>Expiration date</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>19</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </expiration_date>
+                        <features translate="label">
+                            <label>features</label>
+                            <comment>Special features</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </features>
+                        <focus_type translate="label">
+                            <label>focus_type</label>
+                            <comment>Focus type</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </focus_type>
+                        <format translate="label">
+                            <label>format</label>
+                            <comment>Format</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>22</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </format>
+                        <functions translate="label">
+                            <label>functions</label>
+                            <comment>Functions</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>23</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </functions>
+                        <genre translate="label">
+                            <label>genre</label>
+                            <comment>Genre</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>24</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </genre>
+                        <heel_height translate="label">
+                            <label>heel_height</label>
+                            <comment>Heel height</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </heel_height>
+                        <height translate="label">
+                            <label>height</label>
+                            <comment>Height</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>26</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </height>
+                        <image_thumb_url translate="label">
+                            <label>image_thumb_url</label>
+                            <comment>Thumbnail image URL (Recommended)</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>27</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </image_thumb_url>
+                        <image_url translate="label">
+                            <label>image_url</label>
+                            <comment>Standard image URL (Required)</comment>
+                            <frontend_type>select</frontend_type>
+                            <validate>required-entry</validate>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>28</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </image_url>
+                        <installation translate="label">
+                            <label>installation</label>
+                            <comment>Installation type</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>29</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </installation>
+                        <in_stock translate="label">
+                            <label>in_stock</label>
+                            <comment>Whether product is in stock or not</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_stockyesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </in_stock>
+                        <isbn translate="label">
+                            <label>isbn</label>
+                            <comment>Book ISBN</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>31</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </isbn>
+                        <keywords translate="label">
+                            <label>keywords</label>
+                            <comment>Space separated list of keywords (Recommended)</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>32</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </keywords>
+                        <length translate="label">
+                            <label>length</label>
+                            <comment>Length</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>33</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </length>
+                        <load_type translate="label">
+                            <label>load_type</label>
+                            <comment>Load type</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>34</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </load_type>
+                        <location translate="label">
+                            <label>location</label>
+                            <comment>Shipping location</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </location>
+                        <made_in translate="label">
+                            <label>made_in</label>
+                            <comment>Manufacturing country</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>36</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </made_in>
+                        <manufacturer translate="label">
+                            <label>manufacturer</label>
+                            <comment>Manufacturer or brand (Recommended)</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>37</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </manufacturer>
+                        <material translate="label">
+                            <label>material</label>
+                            <comment>Construction material</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>38</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </material>
+                        <megapixels translate="label">
+                            <label>megapixels</label>
+                            <comment>Megapixels</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>39</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </megapixels>
+                        <memory_capacity translate="label">
+                            <label>memory_capacity</label>
+                            <comment>Memory capacity</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </memory_capacity>
+                        <memory_card_slot translate="label">
+                            <label>memory_card_slot</label>
+                            <comment>Memory card slot type</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>41</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </memory_card_slot>
+                        <memory_type translate="label">
+                            <label>memory_type</label>
+                            <comment>Memory type</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>42</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </memory_type>
+                        <model_number translate="label">
+                            <label>model_number</label>
+                            <comment>Model number</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>43</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </model_number>
+                        <mpn translate="label">
+                            <label>mpn</label>
+                            <comment>Manufacturer part number</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>44</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </mpn>
+                        <name translate="label">
+                            <label>name</label>
+                            <comment>Name or title (Required)</comment>
+                            <frontend_type>select</frontend_type>
+                            <validate>required-entry</validate>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>45</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </name>
+                        <occasion translate="label">
+                            <label>occasion</label>
+                            <comment>Recommended usage occasion</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>46</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </occasion>
+                        <operating_system translate="label">
+                            <label>operating_system</label>
+                            <comment>Operating system</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>47</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </operating_system>
+                        <optical_drive translate="label">
+                            <label>optical_drive</label>
+                            <comment>Optical drive type</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>48</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </optical_drive>
+                        <pages translate="label">
+                            <label>pages</label>
+                            <comment>Number of pages</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>49</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </pages>
+                        <payment_accepted translate="label">
+                            <label>payment_accepted</label>
+                            <comment>Accepted payment methods</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </payment_accepted>
+                        <payment_notes translate="label">
+                            <label>payment_notes</label>
+                            <comment>Additional payment notes</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>51</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </payment_notes>
+                        <platform translate="label">
+                            <label>platform</label>
+                            <comment>Platform</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>52</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </platform>
+                        <price translate="label">
+                            <label>price</label>
+                            <comment>Selling price (Required)</comment>
+                            <frontend_type>select</frontend_type>
+                            <validate>required-entry</validate>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>53</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </price>
+                        <price_retail translate="label">
+                            <label>price_retail</label>
+                            <comment>Manufacturer suggested retail price</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>54</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </price_retail>
+                        <price_sale translate="label">
+                            <label>price_sale</label>
+                            <comment>Discount price</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>55</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </price_sale>
+                        <price_shipping translate="label">
+                            <label>price_shipping</label>
+                            <comment>Shipping price</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>56</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </price_shipping>
+                        <processor translate="label">
+                            <label>processor</label>
+                            <comment>Processor type</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>57</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </processor>
+                        <publisher translate="label">
+                            <label>publisher</label>
+                            <comment>Publisher</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>58</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </publisher>
+                        <quantity_in_stock translate="label">
+                            <label>quantity_in_stock</label>
+                            <comment>Number of items in stock</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_stockquantity</source_model>
+                            <sort_order>59</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </quantity_in_stock>
+                        <rating translate="label">
+                            <label>rating</label>
+                            <comment>Rating</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </rating>
+                        <recommended_usage translate="label">
+                            <label>recommended_usage</label>
+                            <comment>Recommended usage</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>61</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </recommended_usage>
+                        <resolution translate="label">
+                            <label>resolution</label>
+                            <comment>Screen resolution</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>62</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </resolution>
+                        <screen_size translate="label">
+                            <label>screen_size</label>
+                            <comment>Screen size</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>63</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </screen_size>
+                        <shipping_method translate="label">
+                            <label>shipping_method</label>
+                            <comment>Shipping methods</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>64</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shipping_method>
+                        <shoe_size translate="label">
+                            <label>shoe_size</label>
+                            <comment>Shoe size</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>65</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shoe_size>
+                        <shoe_width translate="label">
+                            <label>shoe_width</label>
+                            <comment>Shoe width</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>66</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </shoe_width>
+                        <size translate="label">
+                            <label>size</label>
+                            <comment>Size</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>67</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </size>
+                        <sku translate="label">
+                            <label>sku</label>
+                            <comment>Stock keeping unit (Recommended)</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>68</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </sku>
+                        <staring translate="label">
+                            <label>staring</label>
+                            <comment>Staring actors</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>69</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </staring>
+                        <style translate="label">
+                            <label>style</label>
+                            <comment>Style</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </style>
+                        <tech_spec_url translate="label">
+                            <label>tech_spec_url</label>
+                            <comment>Technical specifications URL</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>71</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </tech_spec_url>
+                        <tracks translate="label">
+                            <label>tracks</label>
+                            <comment>Total number of tracks</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>72</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </tracks>
+                        <upc translate="label">
+                            <label>upc</label>
+                            <comment>Universal product code (Recommended)</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>73</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </upc>
+                        <weight translate="label">
+                            <label>weight</label>
+                            <comment>Weight</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>74</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </weight>
+                        <width translate="label">
+                            <label>width</label>
+                            <comment>Width</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>75</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </width>
+                        <wireless_interface translate="label">
+                            <label>wireless_interface</label>
+                            <comment>Wireless interface</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>76</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </wireless_interface>
+                        <year translate="label">
+                            <label>year</label>
+                            <comment>Year of manufacture - YYYY</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>77</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </year>
+                        <zoom translate="label">
+                            <label>zoom</label>
+                            <comment>Maximum zoom</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>eems_affiliate/system_config_source_attributes</source_model>
+                            <sort_order>78</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </zoom>
+                    </fields>
+                </eems_affiliate_product_attribute_map>
+            </groups>
+        </marketing_solutions>
+    </sections>
 </config>
