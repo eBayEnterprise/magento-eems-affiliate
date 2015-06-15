@@ -43,10 +43,4 @@
 			</exclude>
 		</whitelist>
 	</filter>
-	<logging>
-		<log type="coverage-html" target="var/phpunit/coverage" charset="UTF-8" highlight="true" lowUpperBound="35" highLowerBound="85"/>
-		<log type="coverage-clover" target="var/phpunit/coverage.xml"/>
-		<log type="junit" target="var/phpunit/junit.xml" logIncompleteSkipped="true"/>
-		<log type="tap" target="var/phpunit/testresults.tap"/>
-	</logging>
 </phpunit>
