@@ -14,7 +14,8 @@
  */
 ?>
 
-<?php if ($this->injectJavaScript()): ?>
+<?php if ($this->injectJavaScript()) :
+?>
     <?php $keyName = $this->getQueryStringKeyName(); ?>
     <?php $cookieName = $this->getCookieName(); ?>
     <script type="text/javascript">
@@ -92,4 +93,5 @@
         }(window, document, 45, "<?php echo $keyName ?>", "<?php echo $cookieName ?>"));
         //]]>
     </script>
-<?php endif;
+<?php
+endif;

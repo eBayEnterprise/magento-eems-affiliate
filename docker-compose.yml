@@ -89,7 +89,7 @@ phpcbf:
     volumes:
         - .:/srv/magento
     entrypoint: /srv/magento/build/magento/vendor/bin/phpcbf
-    command: -p --standard=PSR2 src
+    command: -p --standard=PSR2 --extensions=php,phtml,js,css src
 phpcs:
     image: kojiromike/magento_tools
     volumes:

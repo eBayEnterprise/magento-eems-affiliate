@@ -36,75 +36,77 @@
  */
 class EbayEnterprise_Affiliate_Helper_Map
 {
-	/**
-	 * Get the program id using the store passed in params. Pass through to the
-	 * config helper using the store included in the $params array as the store
-	 * context to get the config value from.
-	 * @param  array $params
-	 * @return string
-	 */
-	public function getProgramId($params)
-	{
-		return Mage::helper('eems_affiliate/config')->getProgramId($params['store']);
-	}
-	/**
-	 * Get data for the key from the item. Expects "item" to be a Varien_Object,
-	 * "key" must be set. Additionally, if "format" is also included, it must
-	 * be a valid string format and will be used to format the data before it is
-	 * returned from this method.
-	 * @param  array $params
-	 * @return mixed
-	 * @throws Mage_Core_Exception If the value of the `item` key is not a Varien_Object or the `key` key/value pair is not set.
-	 */
-	public function getDataValue($params)
-	{
-		if (!$params['item'] instanceof Varien_Object) {
-			throw new Mage_Core_Exception(
-				sprintf(
-					'Item of type %s not compatible with %s',
-					get_class($params['item']), __METHOD__
-				)
-			);
-		}
-		if (!isset($params['key'])) {
-			throw new Mage_Core_Exception(
-				'The data "key" must be provided in the configured params for this callback.'
-			);
-		}
-		$helper = Mage::helper('core');
-		return sprintf(
-			isset($params['format']) ? $params['format'] : '%s',
-			preg_replace('/\s\s+/', ' ', $helper->stripTags($params['item']->getDataUsingMethod($params['key'])))
-		);
-	}
-	/**
-	 * Simply return the "value" included in the params.
-	 * @param  array $params
-	 * @return string
-	 * @throws Mage_Core_Exception If the `value` key/value pair is not set.
-	 */
-	public function passStatic($params)
-	{
-		if (!isset($params['value'])) {
-			throw new Mage_Core_Exception(sprintf(
-				'No value provided to return from %s', __METHOD__
-			));
-		}
-		return $params['value'];
-	}
-	/**
-	 * check if an attribute has value then return 'yes' otherwise  return
-	 * 'no'
-	 * @param  array $params
-	 * @return string
-	 */
-	public function getValueYesNo(array $params)
-	{
-		return sprintf(
-			isset($params['format']) ? $params['format'] : '%s',
-			Mage::helper('eems_affiliate')->parseBoolToYesNo(
-				$params['item']->getDataUsingMethod($params['key'])
-			)
-		);
-	}
+    /**
+     * Get the program id using the store passed in params. Pass through to the
+     * config helper using the store included in the $params array as the store
+     * context to get the config value from.
+     * @param  array $params
+     * @return string
+     */
+    public function getProgramId($params)
+    {
+        return Mage::helper('eems_affiliate/config')->getProgramId($params['store']);
+    }
+    /**
+     * Get data for the key from the item. Expects "item" to be a Varien_Object,
+     * "key" must be set. Additionally, if "format" is also included, it must
+     * be a valid string format and will be used to format the data before it is
+     * returned from this method.
+     * @param  array $params
+     * @return mixed
+     * @throws Mage_Core_Exception If the value of the `item` key is not a Varien_Object or the `key` key/value pair is not set.
+     */
+    public function getDataValue($params)
+    {
+        if (!$params['item'] instanceof Varien_Object) {
+            throw new Mage_Core_Exception(
+                sprintf(
+                    'Item of type %s not compatible with %s',
+                    get_class($params['item']),
+                    __METHOD__
+                )
+            );
+        }
+        if (!isset($params['key'])) {
+            throw new Mage_Core_Exception(
+                'The data "key" must be provided in the configured params for this callback.'
+            );
+        }
+        $helper = Mage::helper('core');
+        return sprintf(
+            isset($params['format']) ? $params['format'] : '%s',
+            preg_replace('/\s\s+/', ' ', $helper->stripTags($params['item']->getDataUsingMethod($params['key'])))
+        );
+    }
+    /**
+     * Simply return the "value" included in the params.
+     * @param  array $params
+     * @return string
+     * @throws Mage_Core_Exception If the `value` key/value pair is not set.
+     */
+    public function passStatic($params)
+    {
+        if (!isset($params['value'])) {
+            throw new Mage_Core_Exception(sprintf(
+                'No value provided to return from %s',
+                __METHOD__
+            ));
+        }
+        return $params['value'];
+    }
+    /**
+     * check if an attribute has value then return 'yes' otherwise  return
+     * 'no'
+     * @param  array $params
+     * @return string
+     */
+    public function getValueYesNo(array $params)
+    {
+        return sprintf(
+            isset($params['format']) ? $params['format'] : '%s',
+            Mage::helper('eems_affiliate')->parseBoolToYesNo(
+                $params['item']->getDataUsingMethod($params['key'])
+            )
+        );
+    }
 }
