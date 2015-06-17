@@ -15,7 +15,6 @@
  *
  */
 
-
 class EbayEnterprise_Affiliate_Model_Feed_Order_Itemized extends EbayEnterprise_Affiliate_Model_Feed_Order_Abstract
 {
     /**
@@ -52,7 +51,10 @@ class EbayEnterprise_Affiliate_Model_Feed_Order_Itemized extends EbayEnterprise_
                 "(o.original_increment_id IS NOT NULL AND o.created_at >= :lastRunTime AND o.created_at < :startTime) OR " .
                 "(cmo.created_at IS NOT NULL AND cmo.created_at >= :lastRunTime AND cmo.created_at < :startTime) OR " .
                 "(o.state = 'canceled' AND o.updated_at >= :lastRunTime AND o.updated_at < :startTime AND o.relation_child_id IS NULL)"
-            );
+            )
+            // The left joins can leave duplicate item rows
+            // But the selected items will be identical, so we don't need them.
+            ->distinct();
 
         $collection->addBindParam(':lastRunTime', $lastRunTime)
             ->addBindParam(':startTime', $startTime);

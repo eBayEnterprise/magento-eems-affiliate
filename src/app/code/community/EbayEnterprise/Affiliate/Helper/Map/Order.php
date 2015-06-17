@@ -65,7 +65,7 @@ class EbayEnterprise_Affiliate_Helper_Map_Order
         // don't allow negative amounts - could happen if a discounted item was cancelled
         return max(
             0,
-            $item->getBasePrice() * $this->getItemQuantity($params) - ($item->getBaseDiscountAmount() - $item->getbaseDiscountRefunded())
+            $item->getBasePrice() * $this->getItemQuantity($params) - ($item->getBaseDiscountAmount() - $item->getBaseDiscountRefunded())
         );
     }
     /**
