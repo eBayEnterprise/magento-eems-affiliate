@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.1.3] - 2015-06-19
+## Fixed
+- Itemized Corrected Orders Feed crashes with Credit Memos
+
 ## [1.1.2] - 2015-03-17
 ### Fixed
 - Feed running multiple times with the same data
